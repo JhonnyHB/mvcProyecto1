@@ -1,0 +1,24 @@
+﻿using Microsoft.EntityFrameworkCore;
+using mvcProyecto1.Models;
+
+namespace mvcProyecto1.Data
+{
+        public class ApplicationDbContext : DbContext
+
+        {
+
+            public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+
+                : base(options)
+
+            {
+
+            }
+
+            //Aqui todos los modelos que se creen  
+
+            public DbSet<Producto> Producto { get; set; } 
+
+        }
+    
+}
